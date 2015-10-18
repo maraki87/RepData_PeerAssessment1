@@ -48,14 +48,14 @@ Mean total number of steps taken per day:
 totalSteps = aggregate(noNA$steps, list(Date = noNA$date), FUN = "sum")$x
 mean(totalSteps)
 ```
-# The mean total number of steps taken per day is 9354.
+#### The mean total number of steps taken per day is 9354.
 
 Median total number of steps taken per day:
 ```{r}
 median(totalSteps)
 ```
 
-# The median total number of steps taken per day is 10395.
+#### The median total number of steps taken per day is 10395.
 
 
 ### D. What is the average daily activity pattern?
@@ -72,7 +72,7 @@ ggplot(avgSteps, aes(interval, meanOfSteps)) + geom_line(color = "steelblue", si
 ```{r}
 avgSteps[avgSteps$meanOfSteps == max(avgSteps$meanOfSteps), ]
 ```
-# The 5-minute interval that contains the maximum of steps, on average across all days, is 835.
+#### The 5-minute interval that contains the maximum of steps, on average across all days, is 835.
 
 ### E. Imputing missing values
 * The total number of rows with NAs:
@@ -80,7 +80,7 @@ avgSteps[avgSteps$meanOfSteps == max(avgSteps$meanOfSteps), ]
 ```{r}
 sum(is.na(data))
 ```
-# The number of NA’s is 2304.
+#### The number of NA’s is 2304.
 
 * Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
@@ -120,14 +120,14 @@ newMean = mean(newTotalSteps)
 newMean
 ```
 
-# The mean total number of steps taken per day is 10766.
+#### The mean total number of steps taken per day is 10766.
 
 Median total number of steps taken per day:
 ```{r}
 newMedian = median(newTotalSteps)
 newMedian
 ```
-# The median total number of steps taken per day is 10765.
+#### The median total number of steps taken per day is 10765.
 
 Compare them with the two before imputing missing data:
 ```{r}
