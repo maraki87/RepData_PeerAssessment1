@@ -1,6 +1,10 @@
 ---
 title: "PA1_template"
+<<<<<<< HEAD
 author: "Maria Luppi"
+=======
+author: "---"
+>>>>>>> origin/master
 date: "Sunday, November 15, 2015"
 output: html_document
 ---
@@ -27,6 +31,7 @@ library(ggplot2)
 ## C. What is mean total number of steps taken per day?
 
 ### For this part of the assignment, you can ignore the missing values in the dataset.
+<<<<<<< HEAD
 
 ### Calculate the total number of steps taken per day The results obtained are the following:
   
@@ -40,6 +45,21 @@ library(ggplot2)
 2012-10-06 15420
 ### Make a histogram of the total number of steps taken each day
 
+=======
+
+### Calculate the total number of steps taken per day The results obtained are the following:
+  
+  date total
+
+2012-10-01 0
+2012-10-02 126
+2012-10-03 11352
+2012-10-04 12116
+2012-10-05 13294
+2012-10-06 15420
+### Make a histogram of the total number of steps taken each day
+
+>>>>>>> origin/master
 ```{r}
 ggplot(noNA, aes(date, steps)) + geom_bar(stat = "identity", colour = "steelblue", fill = "steelblue", width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day", x = "Date", y = "Total number of steps")
 ```
@@ -178,3 +198,19 @@ xyplot(avgSteps$meanOfSteps ~ avgSteps$interval | avgSteps$weekdays,
        xlab = "Interval", ylab = "Number of steps")
 ```
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/master
